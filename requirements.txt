@@ -1,0 +1,2 @@
+portal-gun==0.2.0
+Fabric==1.14.0

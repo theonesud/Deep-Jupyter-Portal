@@ -1,0 +1,14 @@
+[Unit]
+Description=Jupyter notebook
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/ext_mount
+ExecStart=/home/ubuntu/anaconda3/bin/jupyter notebook --ip=0.0.0.0 --no-browser
+SuccessExitStatus=143
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
