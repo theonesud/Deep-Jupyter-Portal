@@ -15,24 +15,20 @@ if __name__ == '__main__':
     ssh_run = "ssh ubuntu@{} '{{}}'".format(ip)
 
     print('>>> Uploading configs')
-    o = run('echo "c.NotebookApp.token = \'{}\'" >> ./jupyter_notebook_config.py &&'
-            'scp ./jupyter.service ubuntu@{}:~/ &&'
-            'scp ./jupyter_notebook_config.py ubuntu@{}:~/ &&'
-            'rm ./jupyter_notebook_config.py'.format(token, ip, ip))
-    print(o)
+    print(run('echo "c.NotebookApp.token = \'{}\'" >> ./jupyter_notebook_config.py &&'
+              'scp ./jupyter.service ubuntu@{}:~/ &&'
+              'scp ./jupyter_notebook_config.py ubuntu@{}:~/ &&'
+              'rm ./jupyter_notebook_config.py'.format(token, ip, ip)))
 
     print('>>> Starting jupyter')
-    o = run(ssh_run.format('sudo rm -f /etc/systemd/system/jupyter.service && '
-                           'sudo mv ~/jupyter.service /etc/systemd/system/ && '
-                           'sudo systemctl daemon-reload && '
-                           'sudo systemctl enable jupyter.service && '
-                           'rm -f ~/.jupyter/jupyter_notebook_config.py && '
-                           'mv ~/jupyter_notebook_config.py ~/.jupyter/ && '
-                           'sudo systemctl restart jupyter'))
-    print(o)
-    time.sleep(2)
+    print(run(ssh_run.format('sudo rm -f /etc/systemd/system/jupyter.service && '
+                             'sudo mv ~/jupyter.service /etc/systemd/system/ && '
+                             'sudo systemctl daemon-reload && '
+                             'sudo systemctl enable jupyter.service && '
+                             'rm -f ~/.jupyter/jupyter_notebook_config.py && '
+                             'mv ~/jupyter_notebook_config.py ~/.jupyter/ && '
+                             'sudo systemctl restart jupyter')))
 
     print('>>> Opening browser and start sync')
-    o = run('open http://{}:8888/?token={} &&'
-            'portal channel deep_gpu'.format(ip, token))
-    print(o)
+    print(run('open http://{}:8888/?token={} &&'
+              'portal channel deep_gpu'.format(ip, token)))

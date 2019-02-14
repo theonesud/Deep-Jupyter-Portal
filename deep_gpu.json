@@ -29,6 +29,11 @@
             "direction": "in", 
             "remote_path": "/home/ubuntu/ext_mount/",
             "local_path": "/Users/sudhanshupassi/Desktop/ext_mount" 
+        },
+        {
+            "direction": "out", 
+            "local_path": "/Users/sudhanshupassi/Desktop/Deep-Jupyter-Portal/",
+            "remote_path": "/home/ubuntu/ext_mount"
         }
     ]
 }
