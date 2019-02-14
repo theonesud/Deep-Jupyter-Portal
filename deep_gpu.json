@@ -33,7 +33,7 @@
         {
             "direction": "out", 
             "local_path": "/Users/sudhanshupassi/Desktop/Deep-Jupyter-Portal/",
-            "remote_path": "/home/ubuntu/ext_mount/repo"
+            "remote_path": "/home/ubuntu/ext_mount/Deep-Jupyter-Portal"
         }
     ]
 }

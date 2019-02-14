@@ -15,13 +15,13 @@ if __name__ == '__main__':
     ssh_run = "ssh ubuntu@{} '{{}}'".format(ip)
 
     print('>>> Uploading configs')
-    print(run('echo "c.NotebookApp.token = \'{}\'" >> ./jupyter_notebook_config.py &&'
-              'scp ./jupyter.service ubuntu@{}:~/ &&'
-              'scp ./jupyter_notebook_config.py ubuntu@{}:~/ &&'
+    print(run('echo "c.NotebookApp.token = \'{}\'" >> ./jupyter_notebook_config.py && '
+              'scp ./jupyter.service ubuntu@{}:~/ && '
+              'scp ./jupyter_notebook_config.py ubuntu@{}:~/ && '
               'rm ./jupyter_notebook_config.py'.format(token, ip, ip)))
 
     print('>>> Starting jupyter')
-    print(run(ssh_run.format('mkdir ~/ext_mount/notebooks ~/ext_mount/repo &&'
+    print(run(ssh_run.format('mkdir -p ~/ext_mount/notebooks ~/ext_mount/repo && '
                              'sudo rm -f /etc/systemd/system/jupyter.service && '
                              'sudo mv ~/jupyter.service /etc/systemd/system/ && '
                              'sudo systemctl daemon-reload && '
@@ -31,5 +31,5 @@ if __name__ == '__main__':
                              'sudo systemctl restart jupyter')))
 
     print('>>> Opening browser and start sync')
-    print(run('open http://{}:8888/?token={} &&'
+    print(run('open http://{}:8888/?token={} && '
               'portal channel deep_gpu'.format(ip, token)))
