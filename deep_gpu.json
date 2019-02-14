@@ -27,7 +27,7 @@
     "channels": [
         {
             "direction": "in", 
-            "remote_path": "/home/ubuntu/ext_mount/notebooks",
+            "remote_path": "/home/ubuntu/ext_mount/notebooks/",
             "local_path": "/Users/sudhanshupassi/Desktop/notebooks" 
         },
         {

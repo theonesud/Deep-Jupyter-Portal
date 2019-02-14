@@ -21,7 +21,8 @@ if __name__ == '__main__':
               'rm ./jupyter_notebook_config.py'.format(token, ip, ip)))
 
     print('>>> Starting jupyter')
-    print(run(ssh_run.format('sudo rm -f /etc/systemd/system/jupyter.service && '
+    print(run(ssh_run.format('mkdir ~/ext_mount/notebooks ~/ext_mount/repo &&'
+                             'sudo rm -f /etc/systemd/system/jupyter.service && '
                              'sudo mv ~/jupyter.service /etc/systemd/system/ && '
                              'sudo systemctl daemon-reload && '
                              'sudo systemctl enable jupyter.service && '
