@@ -21,7 +21,8 @@ if __name__ == '__main__':
 
     # setting jupyter auth token
     print('{} >>>> Set jupyter token'.format(time.time() - start))
-    subprocess.call(ssh_run.format("echo 'export JUPYTER_TOKEN={}' >> ~/.bashrc".format(token)),
+    subprocess.call(ssh_run.format("echo \"c.NotebookApp.token = '{}'\" >> ~/.jupyter/"
+                                   "jupyter_notebook_config.py".format(token)),
                     shell=True)
 
     # start the service

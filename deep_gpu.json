@@ -1,10 +1,10 @@
 {
     "spot_instance": {
+        "key_pair_name": "sud-mac", 
+        "security_group_id": "sg-0d6b9255a1f850158", 
+        "identity_file": "~/.ssh/id_rsa", 
         "instance_type": "g2.2xlarge", 
         "image_id": "ami-09a706a24845d0723",
-        "key_pair_name": "sud-mac",
-        "identity_file": "~/.ssh/id_rsa",
-        "security_group_id": "sg-0d6b9255a1f850158",
         "availability_zone": "us-east-1a", 
         "subnet_id": "", 
         "remote_group": "ubuntu", 
@@ -15,11 +15,11 @@
         ]
     }, 
     "spot_fleet": {
-        "iam_fleet_role": "arn:aws:iam::350339834057:role/aws-ec2-spot-fleet-tagging-role"
+        "iam_fleet_role": "arn:aws:iam::350339834057:role/aws-ec2-spot-fleet-tagging-role" 
     }, 
     "persistent_volumes": [
         {
-            "volume_id": "vol-04a7331fdedc362f7",
+            "volume_id": "vol-04a7331fdedc362f7", 
             "device": "/dev/xvdg",
             "mount_point": "/home/ubuntu/ext_mount" 
         }
@@ -28,7 +28,7 @@
         {
             "direction": "in", 
             "remote_path": "/home/ubuntu/ext_mount/",
-            "local_path": "/Users/sudhanshupassi/Desktop/fast"
+            "local_path": "/Users/sudhanshupassi/Desktop/fast" 
         }
     ]
 }
