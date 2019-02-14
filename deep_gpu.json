@@ -28,7 +28,7 @@
         {
             "direction": "in", 
             "remote_path": "/home/ubuntu/ext_mount/",
-            "local_path": "/Users/sudhanshupassi/Desktop/fast" 
+            "local_path": "/Users/sudhanshupassi/Desktop/ext_mount" 
         }
     ]
 }
