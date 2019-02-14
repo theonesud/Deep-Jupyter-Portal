@@ -22,7 +22,7 @@ if __name__ == '__main__':
     print(o)
 
     print('>>> Starting jupyter')
-    o = run(ssh_run.format('sudo rm -r /etc/systemd/system/jupyter.service && '
+    o = run(ssh_run.format('sudo rm -f /etc/systemd/system/jupyter.service && '
                            'sudo mv ~/jupyter.service /etc/systemd/system/ && '
                            'sudo systemctl daemon-reload && '
                            'sudo systemctl enable jupyter.service && '
