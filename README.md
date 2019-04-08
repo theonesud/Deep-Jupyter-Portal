@@ -1,6 +1,7 @@
 # Deep Jupyter Portal
 
 Easy setup and teardown for Jupyter notebooks on GPU enabled AWS spot instance for deep learning. 
+
 Medium post: [link](https://medium.com/@sdhnshu/pro-deep-learning-setup-at-90-off-e9e68f5e84ec)
 
 ## Installation
