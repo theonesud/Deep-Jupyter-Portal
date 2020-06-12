@@ -1,6 +1,6 @@
 # Deep Jupyter Portal
 
-This repo is accompanied with the following post: [link](https://medium.com/@sdhnshu/pro-deep-learning-setup-at-90-off-e9e68f5e84ec)
+[Read this medium article for a detailed guide](https://medium.com/@sdhnshu/pro-deep-learning-setup-at-90-off-e9e68f5e84ec)
 
 ## Installation
 
