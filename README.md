@@ -1,6 +1,6 @@
 # Deep Jupyter Portal
 
-[Read this medium article for a detailed guide](https://medium.com/@sdhnshu/pro-deep-learning-setup-at-90-off-e9e68f5e84ec)
+[Read "Affordable Deep Learning with automated AWS Spot Instances" on Medium](https://medium.com/@sdhnshu/pro-deep-learning-setup-at-90-off-e9e68f5e84ec)
 
 ## Installation
 
